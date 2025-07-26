@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Offers | Special Promotions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+        .promo-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .promo-card:hover {
+            transform: translateY(-5px);
+            border-color: #4f46e5;
+        }
+        .offer-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #ef4444;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transform: rotate(15deg);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .gift-card {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .gift-card:hover {
+            transform: translateY(-5px) rotate(2deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-indigo-600">SpecialOffers</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-indigo-600 transition">Features</a>
+                    <a href="#promotions" class="text-gray-700 hover:text-indigo-600 transition">Special Offers</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-indigo-600 transition">Testimonials</a>
+                    <a href="#gaming" class="text-gray-700 hover:text-indigo-600 transition">Gaming</a>
+                </div>
+                <div class="flex items-center">
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Get Offers</button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-indigo-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#features" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md">Features</a>
+                <a href="#promotions" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md">Special Offers</a>
+                <a href="#testimonials" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md">Testimonials</a>
+                <a href="#gaming" class="block px-3 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md">Gaming</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Exclusive Offers Just For You</h1>
+                    <p class="text-lg mb-8 text-indigo-100">Discover amazing deals, gift cards, and special promotions that you won't find anywhere else. Limited time offers available now!</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#promotions" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center">View Offers</a>
+                        <a href="#gaming" class="border border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:bg-opacity-10 transition text-center">Gaming Deals</a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <svg class="w-full max-w-md" viewBox="0 0 550 400" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Gift Card Background -->
+                            <rect x="50" y="50" width="450" height="300" rx="20" fill="#ffffff" fill-opacity="0.1"/>
+                            <rect x="100" y="100" width="350" height="200" rx="10" fill="#ffffff" fill-opacity="0.2"/>
+                            
+                            <!-- Gift Card Details -->
+                            <rect x="150" y="150" width="250" height="100" rx="5" fill="#ffffff" fill-opacity="0.3"/>
+                            <path d="M150,200 L400,200" stroke="#ffffff" stroke-width="8" stroke-dasharray="20,15" fill="none"/>
+                            
+                            <!-- Gift Card Logo -->
+                            <circle cx="275" cy="200" r="60" fill="#ffffff" fill-opacity="0.3"/>
+                            <text x="275" y="200" font-size="24" fill="#ffffff" text-anchor="middle" dominant-baseline="middle" font-weight="bold">GIFT</text>
+                            
+                            <!-- Gift Card Border -->
+                            <path d="M150,150 L400,150 L400,250 L150,250 Z" stroke="#ffffff" stroke-width="4" fill="none" stroke-dasharray="10,10"/>
+                            
+                            <!-- Gift Card Chip -->
+                            <rect x="170" y="170" width="40" height="30" rx="5" fill="#ffffff" fill-opacity="0.5"/>
+                            
+                            <!-- Gift Card Number -->
+                            <text x="275" y="240" font-size="14" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">**** **** **** ****</text>
+                        </svg>
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full p-8">
+                            <div class="text-white text-center">
+                                <div class="text-3xl font-bold">FREE</div>
+                                <div class="text-xl">Gift Cards</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Offers Banner -->
+    <section class="bg-indigo-100 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12">
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 text-indigo-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="font-medium">Walmart Gift Cards</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 text-indigo-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="font-medium">PayPal Offers</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 text-indigo-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="font-medium">PlayStation 5 Deals</span>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 text-indigo-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="font-medium">Free Samples</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Offers</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We provide the best exclusive deals and promotions you won't find anywhere else.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card">
+                    <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-indigo-600 feature-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Exclusive Gift Cards</h3>
+                    <p class="text-gray-600 mb-4">Access to exclusive gift cards from top retailers like Walmart, PayPal, and more.</p>
+                    <a href="#promotions" class="text-indigo-600 font-medium hover:text-indigo-700 inline-flex items-center">
+                        View gift cards
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card">
+                    <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-indigo-600 feature-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path>
+                            <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Free Samples</h3>
+                    <p class="text-gray-600 mb-4">Get access to free samples for both Android and iOS devices with our special promotions.</p>
+                    <a href="#promotions" class="text-indigo-600 font-medium hover:text-indigo-700 inline-flex items-center">
+                        Get free samples
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card">
+                    <div class="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-indigo-600 feature-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Gaming Promotions</h3>
+                    <p class="text-gray-600 mb-4">Special deals on gaming products including PlayStation 5 and other gaming accessories.</p>
+                    <a href="#gaming" class="text-indigo-600 font-medium hover:text-indigo-700 inline-flex items-center">
+                        View gaming deals
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Promotions Section -->
+    <section id="promotions" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Exclusive Offers</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Check out these special promotions available for a limited time.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Promo Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm promo-card relative">
+                    <div class="offer-badge">FREE</div>
+                    <div class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full w-fit mb-4">LIMITED TIME</div>
+                    <div class="flex justify-center mb-6">
+                        <!-- Gift Card SVG Illustration -->
+                        <svg class="w-48 h-48" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Card Background -->
+                            <rect x="10" y="40" width="180" height="120" rx="10" fill="#4f46e5"/>
+                            <rect x="15" y="45" width="170" height="110" rx="8" fill="#6366f1" stroke="#ffffff" stroke-width="1"/>
+                            
+                            <!-- Gift Card Design -->
+                            <rect x="25" y="65" width="150" height="70" rx="5" fill="#818cf8"/>
+                            <circle cx="50" cy="80" r="15" fill="#c7d2fe"/>
+                            <rect x="75" y="75" width="80" height="10" rx="2" fill="#c7d2fe"/>
+                            <rect x="75" y="95" width="60" height="10" rx="2" fill="#c7d2fe"/>
+                            <rect x="75" y="115" width="90" height="10" rx="2" fill="#c7d2fe"/>
+                            
+                            <!-- Gift Ribbon -->
+                            <path d="M100,20 L110,30 L100,40 L90,30 Z" fill="#ef4444"/>
+                            <rect x="98" y="10" width="4" height="30" fill="#ef4444"/>
+                            <path d="M70,40 C70,40 85,20 100,40 C115,20 130,40 130,40" stroke="#ef4444" stroke-width="4" fill="none"/>
+                            
+                            <!-- Gift Text -->
+                            <text x="100" y="170" font-size="14" fill="#4f46e5" text-anchor="middle" font-weight="bold">FREE GIFT CARD</text>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Free Gift Cards</h3>
+                    <p class="text-gray-600 mb-6 text-center">Claim your free gift card today! Limited availability.</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2423732&id=68993&tracking_id=" class="block w-full bg-indigo-600 text-white py-3 rounded-md font-medium hover:bg-indigo-700 transition text-center">Claim Now</a>
+                </div>
+                
+                <!-- Promo Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm promo-card relative">
+                    <div class="offer-badge">HOT</div>
+                    <div class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full w-fit mb-4">POPULAR</div>
+                    <div class="flex justify-center mb-6">
+                        <!-- Walmart Gift Card SVG Illustration -->
+                        <svg class="w-48 h-48" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Card Background -->
+                            <rect x="10" y="40" width="180" height="120" rx="10" fill="#0071ce"/>
+                            <rect x="15" y="45" width="170" height="110" rx="8" fill="#0071ce" stroke="#ffffff" stroke-width="1"/>
+                            
+                            <!-- Walmart Logo -->
+                            <text x="100" y="80" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">WALMART</text>
+                            <text x="100" y="100" font-size="12" fill="#ffffff" text-anchor="middle">GIFT CARD</text>
+                            
+                            <!-- Card Details -->
+                            <rect x="30" y="115" width="140" height="20" rx="3" fill="#ffffff" fill-opacity="0.2"/>
+                            <text x="100" y="130" font-size="10" fill="#ffffff" text-anchor="middle">**** **** **** 1234</text>
+                            
+                            <!-- Walmart Spark -->
+                            <circle cx="100" cy="60" r="12" fill="#ffc220"/>
+                            <path d="M100,48 L103,56 L111,56 L105,61 L107,69 L100,64 L93,69 L95,61 L89,56 L97,56 Z" fill="#ffffff"/>
+                            
+                            <!-- Gift Card Text -->
+                            <text x="100" y="170" font-size="14" fill="#0071ce" text-anchor="middle" font-weight="bold">WALMART GIFT CARD</text>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">Walmart Gift Card</h3>
+                    <p class="text-gray-600 mb-6 text-center">Get a free Walmart gift card with your purchase.</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2423732&id=68831&tracking_id=" class="block w-full bg-indigo-600 text-white py-3 rounded-md font-medium hover:bg-indigo-700 transition text-center">Get Card</a>
+                </div>
+                
+                <!-- Promo Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm promo-card relative">
+                    <div class="offer-badge">NEW</div>
+                    <div class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full w-fit mb-4">NEW</div>
+                    <div class="flex justify-center mb-6">
+                        <!-- PayPal Gift Card SVG Illustration -->
+                        <svg class="w-48 h-48" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Card Background -->
+                            <rect x="10" y="40" width="180" height="120" rx="10" fill="#003087"/>
+                            <rect x="15" y="45" width="170" height="110" rx="8" fill="#003087" stroke="#ffffff" stroke-width="1"/>
+                            
+                            <!-- PayPal Logo -->
+                            <rect x="40" y="65" width="120" height="40" rx="5" fill="#ffffff"/>
+                            <text x="100" y="90" font-size="18" fill="#003087" text-anchor="middle" font-weight="bold">PayPal</text>
+                            
+                            <!-- Card Details -->
+                            <rect x="30" y="115" width="140" height="20" rx="3" fill="#ffffff" fill-opacity="0.2"/>
+                            <text x="100" y="130" font-size="10" fill="#ffffff" text-anchor="middle">**** **** **** 5678</text>
+                            
+                            <!-- PayPal P Logo -->
+                            <path d="M75,80 C75,73 80,70 85,70 C95,70 93,90 83,90 L80,90 L78,100 L70,100 L75,80 Z" fill="#003087"/>
+                            <path d="M85,80 C85,73 90,70 95,70 C105,70 103,90 93,90 L90,90 L88,100 L80,100 L85,80 Z" fill="#009cde" transform="translate(10, 0)"/>
+                            
+                            <!-- Gift Card Text -->
+                            <text x="100" y="170" font-size="14" fill="#003087" text-anchor="middle" font-weight="bold">PAYPAL GIFT CARD</text>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3 text-center">PayPal Gift Card</h3>
+                    <p class="text-gray-600 mb-6 text-center">Claim your PayPal gift card while supplies last.</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2423732&id=69145&tracking_id=" class="block w-full bg-indigo-600 text-white py-3 rounded-md font-medium hover:bg-indigo-700 transition text-center">Claim Now</a>
+                </div>
+            </div>
+
+            <!-- More Promotions -->
+            <div class="mt-12 grid md:grid-cols-4 gap-6">
+                <!-- Promo 4 -->
+                <div class="bg-white p-5 rounded-xl shadow-sm promo-card">
+                    <div class="flex justify-center mb-4">
+                        <!-- Colruyt Gift Card SVG Illustration -->
+                        <svg class="w-24 h-24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Card Background -->
+                            <rect x="5" y="20" width="90" height="60" rx="5" fill="#e10019"/>
+                            
+                            <!-- Colruyt Logo -->
+                            <rect x="15" y="35" width="70" height="15" rx="2" fill="#ffffff"/>
+                            <text x="50" y="47" font-size="10" fill="#e10019" text-anchor="middle" font-weight="bold">COLRUYT</text>
+                            
+                            <!-- Card Details -->
+                            <rect x="15" y="55" width="70" height="10" rx="2" fill="#ffffff" fill-opacity="0.3"/>
+                            <text x="50" y="85" font-size="7" fill="#ffffff" text-anchor="middle">GROCERY GIFT CARD</text>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3 text-center">Colruyt Gift Card</h3>
+                    <p class="text-gray-600 mb-4 text-center text-sm">Special offer for grocery shopping</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2423732&id=51674&tracking_id=" class="block w-full bg-indigo-600 text-white py-2 rounded-md font-medium hover:bg-indigo-700 transition text-center text-sm">Get Offer</a>
+                </div>
+                
+                <!-- Promo 5 -->
+                <div class="bg-white p-5 rounded-xl shadow-sm promo-card">
+                    <div class="flex justify-center mb-4">
+                        <!-- Grocery Card SVG Illustration -->
+                        <svg class="w-24 h-24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Card Background -->
+                            <rect x="5" y="20" width="90" height="60" rx="5" fill="#4caf50"/>
+                            
+                            <!-- Grocery Icon -->
+                            <circle cx="50" cy="40" r="10" fill="#ffffff"/>
+                            <path d="M40,40 L60,40 L55,55 L45,55 Z" fill="#ffffff"/>
+                            <path d="M45,35 L55,35 L55,40 L45,40 Z" fill="#4caf50"/>
+                            
+                            <!-- Card Details -->
+                            <rect x="15" y="55" width="70" height="10" rx="2" fill="#ffffff" fill-opacity="0.3"/>
+                            <text x="50" y="85" font-size="7" fill="#ffffff" text-anchor="middle">FREE GROCERY CARD</text>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3 text-center">Free Grocery Card</h3>
+                    <p class="text-gray-600 mb-4 text-center text-sm">Colruyt grocery savings</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2423732&id=51675&tracking_id=" class="block w-full bg-indigo-600 text-white py-2 rounded-md font-medium hover:bg-indigo-700 transition text-center text-sm">Claim Now</a>
+                </div>
+                
+                <!-- Promo 6 -->
+                <div class="bg-white p-5 rounded-xl shadow-sm promo-card">
+                    <div class="flex justify-center mb-4">
+                        <!-- Android Samples SVG Illustration -->
+                        <svg class="w-24 h-24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Android Icon -->
+                            <circle cx="50" cy="50" r="30" fill="#a4c639"/>
+                            
+                            <!-- Android Robot -->
+                            <circle cx="40" cy="40" r="3" fill="#ffffff"/>
+                            <circle cx="60" cy="40" r="3" fill="#ffffff"/>
+                            <path d="M30,50 L30,65 L35,65 L35,50 Z" fill="#ffffff"/>
+                            <path d="M65,50 L65,65 L70,65 L70,50 Z" fill="#ffffff"/>
+                            <path d="M30,50 L70,50 L70,70 L30,70 Z" fill="#ffffff" stroke="#a4c639" stroke-width="1"/>
+                            <path d="M35,30 L65,30 L65,50 L35,50 Z" fill="#ffffff" stroke="#a4c639" stroke-width="1"/>
+                            <path d="M25,40 L35,30" stroke="#a4c639" stroke-width="2" fill="none"/>
+                            <path d="M75,40 L65,30" stroke="#a4c639" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3 text-center">Free Samples</h3>
+                    <p class="text-gray-600 mb-4 text-center text-sm">For Android users</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2423732&id=68777&tracking_id=" class="block w-full bg-indigo-600 text-white py-2 rounded-md font-medium hover:bg-indigo-700 transition text-center text-sm">Get Samples</a>
+                </div>
+                
+                <!-- Promo 7 -->
+                <div class="bg-white p-5 rounded-xl shadow-sm promo-card">
+                    <div class="flex justify-center mb-4">
+                        <!-- iOS Samples SVG Illustration -->
+                        <svg class="w-24 h-24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- iOS Icon -->
+                            <rect x="20" y="20" width="60" height="60" rx="13" fill="#000000"/>
+                            
+                            <!-- Apple Logo -->
+                            <path d="M60,40 C59,35 55,33 51,33 C46,33 44,36 40,36 C36,36 32,33 29,33 C24,33 19,37 19,45 C19,55 25,65 30,65 C34,65 35,63 40,63 C45,63 46,65 50,65 C54,65 60,56 60,45" fill="none" stroke="#ffffff" stroke-width="2"/>
+                            <path d="M50,33 C50,28 47,24 43,22" fill="none" stroke="#ffffff" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3 text-center">Free Samples</h3>
+                    <p class="text-gray-600 mb-4 text-center text-sm">For iOS users</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2423732&id=68777&tracking_id=" class="block w-full bg-indigo-600 text-white py-2 rounded-md font-medium hover:bg-indigo-700 transition text-center text-sm">Get Samples</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gaming Promotions -->
+    <section id="gaming" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Gaming Promotions</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Exclusive deals for gamers and tech enthusiasts.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Gaming Promo 1 -->
+                <div class="bg-gradient-to-r from-indigo-500 to-purple-600 p-6 rounded-xl shadow-md text-white promo-card">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 mr-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                        </svg>
+                        <h3 class="text-xl font-bold">PlayStation 5 Now</h3>
+                    </div>
+                    <div class="flex justify-center mb-6">
+                        <!-- PlayStation 5 SVG Illustration -->
+                        <svg class="w-64 h-48" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- PS5 Console -->
+                            <path d="M50,50 L250,50 C260,50 270,60 270,70 L270,150 C270,160 260,170 250,170 L50,170 C40,170 30,160 30,150 L30,70 C30,60 40,50 50,50 Z" fill="#ffffff"/>
+                            <path d="M55,55 L245,55 C252,55 260,63 260,70 L260,150 C260,157 252,165 245,165 L55,165 C48,165 40,157 40,150 L40,70 C40,63 48,55 55,55 Z" fill="#000000"/>
+                            
+                            <!-- PS5 Disc Slot -->
+                            <rect x="120" y="80" width="60" height="5" rx="2" fill="#333333"/>
+                            
+                            <!-- PS5 Buttons -->
+                            <circle cx="80" cy="110" r="8" fill="#333333"/>
+                            <circle cx="110" cy="110" r="8" fill="#333333"/>
+                            
+                            <!-- PS5 Controller -->
+                            <path d="M180,100 L220,100 C230,100 235,105 235,115 L235,125 C235,135 230,140 220,140 L180,140 C170,140 165,135 165,125 L165,115 C165,105 170,100 180,100 Z" fill="#333333"/>
+                            <circle cx="190" cy="120" r="8" fill="#666666"/>
+                            <circle cx="210" cy="120" r="8" fill="#666666"/>
+                            
+                            <!-- PS Logo -->
+                            <text x="150" y="190" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">PlayStation 5</text>
+                        </svg>
+                    </div>
+                    <p class="mb-6">Get your chance to win a brand new PlayStation 5 console!</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2423732&id=68846&tracking_id=" class="inline-block bg-white text-indigo-600 px-6 py-2 rounded-md font-medium hover:bg-gray-100 transition">Claim Offer</a>
+                </div>
+                
+                <!-- Gaming Promo 2 -->
+                <div class="bg-gradient-to-r from-green-500 to-teal-600 p-6 rounded-xl shadow-md text-white promo-card">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 mr-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 15.5h-1.5V14h-1v3H8v-3H7v4.5H5.5v-5c0-.55.45-1 1-1H11c.55 0 1 .45 1 1v5zm3.5 0H14v-6h3.5c.55 0 1 .45 1 1V16c0 .55-.45 1-1 1h-2v1.5zm-1-4.5H17v1h-2.5v-1zM13 9H9.5v1h2v1h-2v1H13V9zm6 1.5v-1c0-.55-.45-1-1-1h-2.5c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h2.5c.55 0 1-.45 1-1z"/>
+                        </svg>
+                        <h3 class="text-xl font-bold">7-Eleven Gift Card</h3>
+                    </div>
+                    <div class="flex justify-center mb-6">
+                        <!-- 7-Eleven Gift Card SVG Illustration -->
+                        <svg class="w-64 h-48" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Card Background -->
+                            <rect x="30" y="40" width="240" height="140" rx="10" fill="#ffffff"/>
+                            
+                            <!-- 7-Eleven Logo -->
+                            <rect x="50" y="60" width="200" height="60" rx="5" fill="#ff0000"/>
+                            <text x="150" y="100" font-size="30" fill="#ffffff" text-anchor="middle" font-weight="bold">7-ELEVEN</text>
+                            
+                            <!-- Card Details -->
+                            <rect x="50" y="130" width="200" height="20" rx="3" fill="#008000"/>
+                            <text x="150" y="145" font-size="12" fill="#ffffff" text-anchor="middle">GIFT CARD</text>
+                            
+                            <!-- Card Value -->
+                            <text x="150" y="170" font-size="16" fill="#000000" text-anchor="middle" font-weight="bold">$500</text>
+                        </svg>
+                    </div>
+                    <p class="mb-6">Claim your $500 7-Eleven gift card for iOS users!</p>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2423732&id=69339&tracking_id=" class="inline-block bg-white text-green-600 px-6 py-2 rounded-md font-medium hover:bg-gray-100 transition">Get Gift Card</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Deal Section -->
+    <section class="py-16 bg-indigo-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="inline-block bg-indigo-500 px-4 py-1 rounded-full text-sm font-semibold mb-4">FEATURED DEAL</div>
+                    <h2 class="text-3xl font-bold mb-4">Walmart Gift Card Special</h2>
+                    <p class="text-lg mb-6">Don't miss out on our most popular offer! Get a Walmart gift card with exclusive benefits and savings on your favorite products.</p>
+                    <ul class="mb-8 space-y-2">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Limited time availability</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Use online or in-store</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>No purchase necessary</span>
+                        </li>
+                    </ul>
+                    <a href="https://singingfiles.com/show.php?l=0&u=2423732&id=68831&tracking_id=" class="inline-block bg-white text-indigo-600 px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition">Get Walmart Gift Card</a>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="bg-white bg-opacity-10 rounded-lg p-8 backdrop-blur-sm">
+                            <div class="bg-white rounded-lg p-6 shadow-lg transform rotate-3 gift-card">
+                                <!-- Walmart Gift Card Detailed SVG -->
+                                <svg class="w-full h-48" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Card Background -->
+                                    <rect x="0" y="0" width="300" height="180" rx="10" fill="#0071ce"/>
+                                    
+                                    <!-- Walmart Logo -->
+                                    <text x="150" y="50" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">WALMART</text>
+                                    
+                                    <!-- Walmart Spark -->
+                                    <circle cx="150" cy="80" r="20" fill="#ffc220"/>
+                                    <path d="M150,60 L155,75 L170,75 L158,85 L163,100 L150,90 L137,100 L142,85 L130,75 L145,75 Z" fill="#ffffff"/>
+                                    
+                                    <!-- Card Value -->
+                                    <text x="150" y="130" font-size="36" fill="#ffffff" text-anchor="middle" font-weight="bold">$500</text>
+                                    
+                                    <!-- Card Details -->
+                                    <rect x="50" y="150" width="200" height="15" rx="2" fill="#ffffff" fill-opacity="0.2"/>
+                                    <text x="150" y="162" font-size="10" fill="#ffffff" text-anchor="middle">**** **** **** 5678</text>
+                                </svg>
+                                <div class="flex justify-between items-center mt-4">
+                                    <div class="text-gray-500 text-xs">Valid: Limited Time</div>
+                                    <div class="text-gray-500 text-xs">Exclusive Offer</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-0 right-0 bg-red-500 text-white rounded-full w-16 h-16 flex items-center justify-center transform translate-x-1/4 -translate-y-1/4 rotate-12 font-bold">
+                            FREE
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">What People Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Don't just take our word for it. Here's what people have to say about our offers.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 flex">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"I couldn't believe it when I received my Walmart gift card! The process was so simple and it arrived quickly. Will definitely be using these offers again."</p>
+                    <div class="flex items-center">
+                        <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="text-indigo-600 font-semibold">JD</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">John Doe</h4>
+                            <p class="text-gray-500 text-sm">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 flex">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The PayPal gift card was exactly what I needed. The process was straightforward and I received it much faster than expected. Highly recommend!"</p>
+                    <div class="flex items-center">
+                        <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="text-indigo-600 font-semibold">JS</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Jane Smith</h4>
+                            <p class="text-gray-500 text-sm">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 flex">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"I was skeptical at first, but the PlayStation 5 promotion was legitimate! The gaming deals on this site are amazing. Thank you for the opportunity!"</p>
+                    <div class="flex items-center">
+                        <div class="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="text-indigo-600 font-semibold">RJ</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Robert Johnson</h4>
+                            <p class="text-gray-500 text-sm">Verified Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-indigo-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Don't Miss These Limited Time Offers!</h2>
+            <p class="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">Join thousands of satisfied customers who have already claimed their exclusive gift cards and special promotions.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#promotions" class="bg-white text-indigo-600 px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition text-center">View All Offers</a>
+                <a href="https://singingfiles.com/show.php?l=0&u=2423732&id=68993&tracking_id=" class="border border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white hover:bg-opacity-10 transition text-center">Get Free Gift Card</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-white mb-4">SpecialOffers</div>
+                    <p class="text-gray-400 mb-4">Providing exclusive deals and promotions since 2020.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Gift Cards</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://singingfiles.com/show.php?l=0&u=2423732&id=68993&tracking_id=" class="text-gray-400 hover:text-white transition">Free Gift Cards</a></li>
+                        <li><a href="https://singingfiles.com/show.php?l=0&u=2423732&id=68831&tracking_id=" class="text-gray-400 hover:text-white transition">Walmart Gift Card</a></li>
+                        <li><a href="https://singingfiles.com/show.php?l=0&u=2423732&id=69145&tracking_id=" class="text-gray-400 hover:text-white transition">PayPal Gift Card</a></li>
+                        <li><a href="https://singingfiles.com/show.php?l=0&u=2423732&id=51674&tracking_id=" class="text-gray-400 hover:text-white transition">Colruyt Gift Card</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Free Samples</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://singingfiles.com/show.php?l=0&u=2423732&id=68777&tracking_id=" class="text-gray-400 hover:text-white transition">Android Samples</a></li>
+                        <li><a href="https://singingfiles.com/show.php?l=0&u=2423732&id=68777&tracking_id=" class="text-gray-400 hover:text-white transition">iOS Samples</a></li>
+                        <li><a href="https://singingfiles.com/show.php?l=0&u=2423732&id=51675&tracking_id=" class="text-gray-400 hover:text-white transition">Free Grocery Card</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Gaming Offers</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://singingfiles.com/show.php?l=0&u=2423732&id=68846&tracking_id=" class="text-gray-400 hover:text-white transition">PlayStation 5 Now</a></li>
+                        <li><a href="https://singingfiles.com/show.php?l=0&u=2423732&id=69339&tracking_id=" class="text-gray-400 hover:text-white transition">7-Eleven Gift Card</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 SpecialOffers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96567007f23a6f9a',t:'MTc1MzU1OTU0OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
